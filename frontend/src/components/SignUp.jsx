@@ -4,7 +4,7 @@ import { useState } from "react";
 //import { Link } from "react-router-dom"
 export default function SignUp() {
   const[registrationData, setRegistrationData] = useState({
-    username: '',
+    email: '',
     password: ''
   })
   const handleChange  = (e) =>{
@@ -24,7 +24,7 @@ export default function SignUp() {
        console.error(error);
     }
     setRegistrationData({
-      username: '',
+      email: '',
       password: ''
    });
  };
@@ -36,11 +36,11 @@ export default function SignUp() {
  <div>
   <h1>Registration Form</h1>
   <form onSubmit={handleSubmit}>
-    <input type="text" 
-    name="username"  
-    placeholder="Username" 
+    <input type="email" 
+    name="email"  
+    placeholder="email" 
     required
-    value={registrationData.username}
+    value={registrationData.email}
     onChange={handleChange}
     />
    <input
