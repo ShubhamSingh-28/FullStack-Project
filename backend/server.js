@@ -2,7 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 //import bcrypt from 'bcrypt';
 import { User } from './db/user.js';
-
+import cors from 'cors'
 const app = express();
 const port = 8000;
 
@@ -14,6 +14,8 @@ app.get('/', (req, res) => {
 
 // Middleware for parsing JSON
 app.use(express.json());
+// Enable CORS
+app.use(cors());
 
 // Connect to the database
 const connectDB = async () => {
