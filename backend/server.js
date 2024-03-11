@@ -18,7 +18,7 @@ app.use(cors())
 
 const connectDB = async()=>{
     try {
-       await mongoose.connect(`mongodb+srv://shubham:28012003@cluster0.uhpmz8t.mongodb.net/mydatabase`);
+       await mongoose.connect(`mongodb+srv://@cluster0.uhpmz8t.mongodb.net/mydatabase`);
        console.log("connected");
     } catch (error) {
         console.log(error);
