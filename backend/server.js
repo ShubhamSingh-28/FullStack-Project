@@ -18,8 +18,7 @@ app.use(express.json());
 // Connect to the database
 const connectDB = async () => {
     try {
-       await mongoose.connect(`mongodb+srv://@cluster0.uhpmz8t.mongodb.net/mydatabase`);
-       console.log("connected");
+       
         await mongoose.connect(`mongodb+srv://shubham:28012003@cluster0.uhpmz8t.mongodb.net/mydatabase`);
         console.log("Connected to the database");
     } catch (error) {
